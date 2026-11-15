@@ -24,6 +24,7 @@ const projects = [
     description: 'A 30-minute historical documentary exploring the story and legacy of one of America’s largest ranches.',
     duration: '30 MIN',
     style: 'ranch',
+    thumbnail: 'https://drive.google.com/thumbnail?id=153Av-_59NwfPBoBlDzjoVl3bmpS20Ycu&sz=w1600',
     url: 'https://drive.google.com/file/d/1roY1_TRa0TfmkIJKNN61VihoPGXPvn01/view',
   },
   {
@@ -33,6 +34,7 @@ const projects = [
     description: 'A historical story brought to life through documentary-style editing and visual storytelling.',
     duration: 'DOCUMENTARY',
     style: 'fuller',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1_1RtaocPfA3T2UZZ4XSLQ35GgFChTL4q&sz=w1600',
     url: 'https://drive.google.com/file/d/1-JxNLyGWoGKsJtIVZBU7s0TOb1zdSe5V/view',
   },
 ];
@@ -48,7 +50,7 @@ export default function App() {
     </section>
     <section className="manifesto"><div className="manifesto-image" style={{backgroundImage:'url('+archive.apollo+')'}}/><p className="eyebrow">THE IDEA BEHIND THE EDIT</p><h2>Not just footage.<br/><em>A point of view.</em></h2><p className="manifesto-text">Every frame has a purpose. Every cut moves the story forward. The goal is simple: make people stay, feel something, and remember what they watched.</p></section>
     <section id="work" className="work"><div className="section-heading"><div><p className="eyebrow">A FEW STORIES I'VE WORKED ON</p><h2>Selected <em>work.</em></h2></div><p className="section-aside">DOCUMENTARY / YOUTUBE / SHORT-FORM</p></div>
-      <div className="project-grid">{projects.map((p)=><a className="project project-link" href={p.url} target="_blank" rel="noreferrer" key={p.number} aria-label={'Watch '+p.title}><div className={'project-image '+p.style}><span className="project-number">{p.number}</span><span className="archive-label">SELECTED FILM</span><span className="play-mark"><Play size={19} fill="currentColor"/></span></div><div className="project-info"><div><p className="eyebrow">{p.category}</p><h3>{p.title}</h3><p className="project-description">{p.description}</p></div><span className="duration">{p.duration}</span></div></a>)}</div>
+      <div className="project-grid">{projects.map((p)=><a className="project project-link" href={p.url} target="_blank" rel="noreferrer" key={p.number} aria-label={'Watch '+p.title}><div className={'project-image '+p.style} style={p.thumbnail ? {backgroundImage:'linear-gradient(rgba(20,19,17,.12),rgba(20,19,17,.32)),url('+p.thumbnail+')',backgroundSize:'cover',backgroundPosition:'center'} : undefined}><span className="project-number">{p.number}</span><span className="archive-label">SELECTED FILM</span><span className="play-mark"><Play size={19} fill="currentColor"/></span></div><div className="project-info"><div><p className="eyebrow">{p.category}</p><h3>{p.title}</h3><p className="project-description">{p.description}</p></div><span className="duration">{p.duration}</span></div></a>)}</div>
     </section>
     <section id="about" className="about"><div className="about-side"><p className="eyebrow">A LITTLE ABOUT ME</p><span className="about-mark">A.</span></div><div><h2>I believe a good edit should make a story <em>impossible to leave.</em></h2><p>I’m a video editor focused on documentary storytelling, historical content and engaging YouTube videos. I work with archival visuals, animated maps, sound design and thoughtful pacing to bring stories to life.</p></div></section>
     <section id="approach" className="approach"><p className="eyebrow">WHAT I BRING TO THE STORY</p><h2>Craft behind<br/><em>the cut.</em></h2><div className="service-list"><p><span>01</span> Documentary & long-form editing <ArrowUpRight size={17}/></p><p><span>02</span> Historical research visuals & archival footage <ArrowUpRight size={17}/></p><p><span>03</span> Animated maps, titles & motion graphics <ArrowUpRight size={17}/></p><p><span>04</span> Sound design, pacing & YouTube Shorts <ArrowUpRight size={17}/></p></div></section>
