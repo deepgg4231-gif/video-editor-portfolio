@@ -15,6 +15,7 @@ const projects = [
     description: 'A documentary exploring the tense 13 days that brought the world close to nuclear war.',
     duration: 'DOCUMENTARY',
     style: 'missile',
+    thumbnail: 'https://drive.google.com/thumbnail?id=1Tx_VBUg47GjyvmFv6xsjc1WsYqHf_EgZ&sz=w1600',
     url: 'https://drive.google.com/file/d/1M9C9-0kOgXIvitzRSDMuP6HnCMkyM0nk/view',
   },
   {
