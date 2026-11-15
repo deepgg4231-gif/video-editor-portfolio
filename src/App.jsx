@@ -1,4 +1,5 @@
 import { ArrowUpRight, Play, Mail } from 'lucide-react';
+import { Analytics } from '@vercel/analytics/react';
 
 const archive = {
   jfk: 'https://commons.wikimedia.org/wiki/Special:FilePath/1942_JFK_uniform_portrait.jpg',
@@ -41,7 +42,9 @@ const projects = [
 ];
 
 export default function App() {
-  return <main>
+  return <>
+    <Analytics />
+    <main>
     <nav><a className="logo" href="#">ADNAN WORKICHO<span>.</span></a><div className="navlinks"><a href="#work">Work</a><a href="#about">About</a><a href="#approach">Approach</a></div><a className="navbutton" href="#contact">Let’s talk ↗</a></nav>
     <section className="hero">
       <div className="hero-archive hero-jfk" style={{backgroundImage:'url('+archive.jfk+')'}} />
@@ -56,5 +59,6 @@ export default function App() {
     <section id="about" className="about"><div className="about-side"><p className="eyebrow">A LITTLE ABOUT ME</p><span className="about-mark">A.</span></div><div><h2>I believe a good edit should make a story <em>impossible to leave.</em></h2><p>I’m a video editor focused on documentary storytelling, historical content and engaging YouTube videos. I work with archival visuals, animated maps, sound design and thoughtful pacing to bring stories to life.</p></div></section>
     <section id="approach" className="approach"><p className="eyebrow">WHAT I BRING TO THE STORY</p><h2>Craft behind<br/><em>the cut.</em></h2><div className="service-list"><p><span>01</span> Documentary & long-form editing <ArrowUpRight size={17}/></p><p><span>02</span> Historical research visuals & archival footage <ArrowUpRight size={17}/></p><p><span>03</span> Animated maps, titles & motion graphics <ArrowUpRight size={17}/></p><p><span>04</span> Sound design, pacing & YouTube Shorts <ArrowUpRight size={17}/></p></div></section>
     <footer id="contact"><p className="eyebrow">HAVE A STORY TO TELL?</p><h2>Let’s make<br/>it <em>matter.</em></h2><div className="contact-actions"><a className="primary" href="mailto:adnanpubgmethio@gmail.com"><Mail size={17}/> Email me <ArrowUpRight size={17}/></a><a className="upwork-link" style={{display:"inline-flex",alignItems:"center",justifyContent:"center",gap:"10px",backgroundColor:"#14a800",color:"#ffffff",fontSize:"14px",fontWeight:700,padding:"16px 26px",minHeight:"52px",border:"1px solid #14a800",borderRadius:"4px",textDecoration:"none"}} href="https://www.upwork.com/freelancers/~01fec14a5f7546a2e8" target="_blank" rel="noreferrer">Find me on Upwork <ArrowUpRight size={18}/></a></div><div className="footer-bottom"><span>ADNAN WORKICHO / VIDEO EDITOR</span><span>© 2026 ALL RIGHTS RESERVED</span></div></footer>
-  </main>;
+    </main>
+  </>;
 }
